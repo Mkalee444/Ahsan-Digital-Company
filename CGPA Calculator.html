@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<?php
+session_start();
+
+// Establish database connection (replace with your actual credentials)
+$host = 'localhost';
+$db = 'Calee.great-site.net';
+$user = 'if 0_357426660';
+$password = 'iD3lgOw88X';
+?>
+
+<html>
+<head>
+  <title>CGPA Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 300px;
+    }
+    input {
+          width: 50%;
+          background-color : lightblue;
+          height: 0.75cm;
+          border : none;
+          border-radius: 64px
+ }
+   button {
+          width: 50%;
+          background-color : lightblue;
+          height : 0.75cm;
+          border: none;
+          border-radius : 64px;
+ }
+   #top_bg {
+   position: absolute;
+   top: 0px;
+   left: 0;
+   width: 100%;
+   height: 47px;
+   background-color: lightblue;
+   }
+          
+  </style>        
+          
+    
+  </style>
+</head>
+<body>
+<big><big>
+<center>
+<font color="white">
+    <div id="top_bg">  CGPA CALCULATOR</div>
+    </big></font></big></div>
+<hr>
+<br><br>
+<font color="lightblue">
+This is Current GPA Calculator that developed by 300L students of Computer Sci and IT, Federal University Dutsinma.
+  <form id="cgpaForm">
+    <div>
+      <label for="numCourses">Number of Courses:</label>
+      <br>
+      <input type="number" id="numCourses" name="numCourses" min="1" required>
+    </div>
+    <br>
+    <div id="courseInputs"></div>
+    <br>
+    
+    <button type="submit">Calculate CGPA</button>
+  </form>
+  </center>
+  <div id="cgpaResult"></div>
+
+  <script>
+    document.getElementById('cgpaForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let numCourses = document.getElementById('numCourses').value;
+      let totalCredits = 0;
+      let totalGradePoints = 0;
+
+      for (let i = 1; i <= numCourses; i++) {
+        let creditInput = document.getElementById('creditInput' + i);
+        let gradeInput = document.getElementById('gradeInput' + i);
+        totalCredits += parseInt(creditInput.value);
+        totalGradePoints += parseFloat(creditInput.value) * getGradePoint(gradeInput.value);
+      }
+
+      let cgpa = totalGradePoints / totalCredits;
+      document.getElementById('cgpaResult').innerText = "Your CGPA is: " + cgpa.toFixed(2);
+    });
+
+    function getGradePoint(grade) {
+      grade = grade.toUpperCase();
+      switch (grade) {
+        case 'A': return 5;
+        case 'B': return 4;
+        case 'C': return 3;
+        case 'D': return 2;
+        case 'E': return 1;
+        default: return 0;
+      }
+    }
+
+    document.getElementById('numCourses').addEventListener('change', function() {
+      let numCourses = parseInt(this.value);
+      let courseInputs = '';
+      for (let i = 1; i <= numCourses; i++) {
+        courseInputs += `
+          <div>
+            <label for="creditInput${i}">Credit Units for Course ${i}:</label>
+            <input type="number" id="creditInput${i}" name="creditInput${i}" min="1" required>
+            <label for="gradeInput${i}">Grade for Course ${i}:</label>
+            <input type="text" id="gradeInput${i}" name="gradeInput${i}" pattern="[A-Ea-e]" required title="Please enter a valid grade (A-E)">
+          </div>
+        `;
+      }
+      document.getElementById('courseInputs').innerHTML = courseInputs;
+    });
+
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
