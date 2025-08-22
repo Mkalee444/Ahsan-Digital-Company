@@ -294,7 +294,7 @@
         <p>WhatsApp: +234 8012345678</p>
     
 </div>
-POWERED BY ENGR UMAR LAWAL 
+POWERED BY ENGR UMAR LAWAL
 <script>
     function showSection(sectionId) {
         document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
