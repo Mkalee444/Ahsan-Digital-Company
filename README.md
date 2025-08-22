@@ -1,4 +1,4 @@
-
+to
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -294,7 +294,7 @@
         <p>WhatsApp: +234 8012345678</p>
     </section>
 </div>
-
+POWERED BY ENGR UMAR LAWAL 
 <script>
     function showSection(sectionId) {
         document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
