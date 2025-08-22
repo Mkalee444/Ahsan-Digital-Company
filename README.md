@@ -1,4 +1,4 @@
-to
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -292,7 +292,7 @@ to
         <h2>Contact Us</h2>
         <p>Email: info@ahsandigitalclass.com</p>
         <p>WhatsApp: +234 8012345678</p>
-    </section>
+    
 </div>
 POWERED BY ENGR UMAR LAWAL 
 <script>
@@ -301,8 +301,5 @@ POWERED BY ENGR UMAR LAWAL
         document.getElementById(sectionId).classList.add('active');
     }
 </script>
-
-</body>
-</html>
 
  
